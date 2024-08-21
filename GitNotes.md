@@ -29,4 +29,5 @@ Actually send your changes to the cloud
 `git pull`
 
 `git status` checks if your repo is behind or ahead of the cloud
+
 `git fetch` checks what is different with GitHub (specifically for branches)
