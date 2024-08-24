@@ -21,6 +21,7 @@ public class CostofDriving {
         double finalPrice = gallonsNeeded * pricePG; // Doing the final math to get the price
         
         System.out.printf("The cost of gas will be $%.2f%n", + finalPrice); // Pretty it up
+        ui.close();
     }
 
     

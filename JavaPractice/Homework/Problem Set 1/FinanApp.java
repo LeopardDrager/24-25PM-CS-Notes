@@ -21,6 +21,7 @@ public class FinanApp {
         double futureValue = investmentAmount * everythingExceptFutureValue; // Final mathing
 
  
-        System.out.printf("Future value is  %.2f%n", + futureValue); // Pretty it up since money is only two decimal places
+        System.out.printf("Future value is %.2f%n", + futureValue); // Pretty it up since money is only two decimal places
+        ui.close();
     }
 }

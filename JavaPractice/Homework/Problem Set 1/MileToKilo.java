@@ -12,7 +12,7 @@ public class MileToKilo {
         double mile = ui.nextDouble();
 
         double kilometer = (mile * 1.6); // Created a varible for the equation as it makes it easier to view the code and know whats going on.
-        System.out.print("That's " + kilometer + " in kilometers" );
+        System.out.printf("That's %.2f in kilometers!%n", kilometer); // Make it look better
         ui.close();
     }
 
