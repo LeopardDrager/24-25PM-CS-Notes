@@ -18,6 +18,7 @@ public class SciFi {
 
          System.out.print("What is your school you plan on attending after high school? ");
          String school = ui.nextLine();
+
          System.out.print("What is your pet? ");
          String pet = ui.nextLine();
 
@@ -41,11 +42,20 @@ public class SciFi {
         
         String cityEdit = city.substring(0,4);
         int schoolLength = school.length();
-        String cityNameEdit = city.substring(schoolLength-3,schoolLength);
+        String schoolNameEdit = city.substring(schoolLength-3,schoolLength);
+
+
+        String petNameEdit = pet.substring(0,3);
+        int sibNameLength = sibName.length();
+        String sibNameEdit = sibName.substring(sibNameLength-2,sibNameLength);
 
         String SciFiFirstName = firstnameEdit + lastNameEdit;
-        String SciFiLastName = "j";
-        System.out.print(SciFiFirstName);
+        String SciFiLastName = cityEdit + schoolNameEdit;
+        String ScFiOrigin = petNameEdit + sibNameEdit;
+
+        System.out.println(SciFiFirstName);
+        System.out.println(SciFiLastName);
+        System.out.println(ScFiOrigin);
             
 
 
