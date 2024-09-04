@@ -6,8 +6,9 @@ public class GANV2 {
 
         Scanner ui = new Scanner(System.in);
        
+        //it would be nice to clean our user input... Because we have suspicious users...
         Random generator = new Random();
-        int numberGenerated = generator.nextInt(0,10);
+        int numberGenerated = generator.nextInt(0,11);
        
         System.out.print("Please pick a number from 1-10 ");
         int guess = ui.nextInt();
