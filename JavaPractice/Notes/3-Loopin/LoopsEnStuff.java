@@ -86,6 +86,50 @@ public static void main(String[] args) {
         while (k <= 'Z'){
             System.out.println(k++);
         }
+    
+    
+//////////////////////////////////////////                     FOR LOOPS                      /////////////////////////////////////////////////////////
+/*
+ * for (iterator varible;condition is true; iterate your iterator varible;){
+ *      do this
+ * }
+ */
 
-    }    
+    for (int a=9; a>=0;a--){
+            System.out.print(a);
+        }
+        System.out.println();
+
+        //print out 0-20 but odds
+        for (int a=1; a<=20;a+=2){
+            System.out.print(a);
+        }
+        System.out.println();
+
+
+        //2,1,0,2,1,0,2,1,0
+        //nested for loop or the double for loop
+        for (int a=0;a<3;a++){
+        for (int b=2;b>=0;b--){
+            if (a == 2 && b == 0 ){
+                System.out.print(b);
+                }else {
+                System.out.print(b+",");                
+                }
+            }
+        }
+        System.out.println();
+
+
+        
+
+        for (int c=0; c<100; c++){
+            for (int d=0; d<10; d++){
+                System.out.print(c+""+d+" ");                
+            }
+            System.out.println();
+        }
+
+    }
+
 }
