@@ -23,7 +23,7 @@ public class GANui {
         //It would be nice to clean our user input... Because we have suspicious users... 
         //#1 thing to check for is formatting - ie, is it a whole mumber
         //calculation
-        int cleanAns = Integer.parseInt(guess);       //converts / parses a string back to an integer
+        int cleanAns = Integer.parseInt(guess);       //converts/parses a string back to an integer
         if (cleanAns > numberGenerated ){
             System.out.println("The number was smaller than your guess");
         }else if (cleanAns < numberGenerated){
