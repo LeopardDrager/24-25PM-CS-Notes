@@ -8,7 +8,7 @@ public class findFutureDates {
         System.out.print("Enter today's date: ");
         int todayDate = ui.nextInt();
         
-        if (todayDate == 0){
+        if (todayDate == 0){ // Printing Todays Date
             System.out.println("Today is Sunday");
         }else if (todayDate == 1){
             System.out.println("Today is Monday");
@@ -28,7 +28,7 @@ public class findFutureDates {
         System.out.print("Enter the number of days elapsed since today: ");
         int daysSince = ui.nextInt();
 
-        int future=((todayDate + daysSince) % 7);
+        int future=((todayDate + daysSince) % 7); //Using this to finding what the day name would be
 
         if (future == 0){
             System.out.println("The future day is Sunday");

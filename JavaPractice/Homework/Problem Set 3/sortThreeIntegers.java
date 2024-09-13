@@ -12,7 +12,7 @@ public class sortThreeIntegers {
         System.out.println("Please enter your third integer");
         int thirdNum = input.nextInt();
         
-        
+        // All the possible combinations
         if (thirdNum > secondNum && thirdNum > firstNum && firstNum > secondNum ){
             System.out.print(secondNum + ", " + firstNum + ", " + thirdNum);
         }else if (thirdNum > secondNum && thirdNum > firstNum && secondNum > firstNum ){
