@@ -1,8 +1,4 @@
 //imports for libraries and module
-
-
-
-
 public class Pokemon {
     //global varbiles for the class
     //private -> because other files do not need to access these varible
@@ -10,6 +6,72 @@ public class Pokemon {
     private int hp, attack1Damage, attack2Damage;
     
 
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public String getHt() {
+        return ht;
+    }
+    public void setHt(String ht) {
+        this.ht = ht;
+    }
+    public String getWt() {
+        return wt;
+    }
+    public void setWt(String wt) {
+        this.wt = wt;
+    }
+    public String getAttack1Name() {
+        return attack1Name;
+    }
+    public void setAttack1Name(String attack1Name) {
+        this.attack1Name = attack1Name;
+    }
+    public String getAttack2Name() {
+        return attack2Name;
+    }
+    public void setAttack2Name(String attack2Name) {
+        this.attack2Name = attack2Name;
+    }
+    public String getId() {
+        return id;
+    }
+    public void setId(String id) {
+        this.id = id;
+    }
+    public String getType() {
+        return type;
+    }
+    public void setType(String type) {
+        this.type = type;
+    }
+    public String getPicture() {
+        return picture;
+    }
+    public void setPicture(String picture) {
+        this.picture = picture;
+    }
+    public int getHp() {
+        return hp;
+    }
+    public void setHp(int hp) {
+        this.hp = hp;
+    }
+    public int getAttack1Damage() {
+        return attack1Damage;
+    }
+    public void setAttack1Damage(int attack1Damage) {
+        this.attack1Damage = attack1Damage;
+    }
+    public int getAttack2Damage() {
+        return attack2Damage;
+    }
+    public void setAttack2Damage(int attack2Damage) {
+        this.attack2Damage = attack2Damage;
+    }
     //Constructors - what is needed to have an object of this
     //no-arg Constructor 
     public Pokemon(){
@@ -42,72 +104,6 @@ public class Pokemon {
 
 
     //getters and setters aka accessors and mutators
-    public String getName(){
-        return this.Name;
-    }
-    public void setName(String newName){
-        this.Name = newName;
-    }
-    public String getID(){
-        return this.id;
-    }
-    public void setID(String newID){
-        this.id = newID;
-    }
-    public String getType(){
-        return this.type;
-    }
-    public void setType(String newType){
-        this.Name = newType;
-    }
-    public int getHP(){
-        return this.hp;
-    }
-    public void setHP(int newHP){
-        this.hp = newHP;
-    }
-    public String getHt(){
-        return this.Name;
-    }
-    public void setHt(String newHeight){
-        this.height = newHeight;
-    }
-    public String getWt(){
-        return this.Name;
-    }
-    public void setWt(String newWeight){
-        this.weight = newWeight;
-    }
-    public String getA1N(){
-        return this.attack1Name;
-    }
-    public void setA1N(String newA1N){
-        this.attack1Name = newA1N;
-    }
-    public int getA1D(){
-        return this.attack1damage;
-    }
-    public void setA1D(int newA1D){
-        this.attack1damage = newA1D;
-    }
-    public String getA2N(){
-        return this.attack1Name;
-    }
-    public void setA2N(String newA2N){
-        this.attack2Name = newA2N;
-    }
-    public int getA2D(){
-        return this.attack1damage;
-    }
-    public void setA2D(int newA2D){
-        this.attack2damage = newA2D;
-    }
-    public String getPic(){
-        return this.picture;
-    }
-    public void setPic(String newPicture){
-        this.picture = newPicture;
-    }
    
 
     //methods for the object

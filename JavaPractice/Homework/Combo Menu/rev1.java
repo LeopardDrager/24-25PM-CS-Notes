@@ -37,7 +37,7 @@ public class rev0 {
     }
     
 
-    private static String orderFries(){
+    private static String orderFries(){ // asking user if they want fry
         String tempFries = "";
         Scanner ui = new Scanner(System.in);
         System.out.println("Would a like some fries? y/n ");
