@@ -2,15 +2,23 @@ import java.util.Scanner;
 
 public class rev2   {
     public static double total = 0;
+    public static boolean discount = false;
 
     public static void main(String[] args) {
-        
         String tempSand = orderSandwhich();
         String tempFries = orderFries();
         String tempDrink = orderDrink();
         System.out.println( "You got a " +tempSand+" "+tempFries + " "+tempDrink);
-        System.out.println(total);
-    }
+        if(discount == true){
+            total = total-1; 
+        }
+        Scanner ui = new Scanner(System.in);
+        System.out.println((total*1.07));
+
+        System.out.println("Would you like some ketchup packets? If so how many? Type 0 for none");
+        
+
+    ui.close();}
 
 
          
@@ -21,7 +29,7 @@ public class rev2   {
         String sandwhichChoice = ui.next();
 
         if (sandwhichChoice.equalsIgnoreCase("y")){
-            
+            discount = true;
             System.out.println("The prices are \n 1. Tofu: $5.75 \n 2. Chicken: $5.25 \n 3. Beef: $6.25 \n 4. None of these");
             int toppingChoice = ui.nextInt();
 
@@ -63,11 +71,14 @@ public class rev2   {
                 }
         }else {
             System.out.println("I guess you don't want fries.");
-        }
+            discount = false;    
+        }   
         return tempFries;
         
         }
-    private static String orderDrink(){ // asking user if they want fry
+
+   
+    private static String orderDrink(){ // asking user if they want a drink
         String tempDrink = "";
         Scanner ui = new Scanner(System.in);
         System.out.println("Would you like a drink? y/n ");
@@ -97,10 +108,11 @@ public class rev2   {
                 }
         }else {
             System.out.println("I guess you don't want a drink.");
+            discount = false;
         }
         return tempDrink;
         
-        }
+        ui.close();}
 
 
 
