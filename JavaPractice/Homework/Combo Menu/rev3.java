@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
 public class rev2   {
+
+    
     public static double total = 0;
     public static boolean discount = false;
 
@@ -9,14 +11,20 @@ public class rev2   {
         String tempFries = orderFries();
         String tempDrink = orderDrink();
         System.out.println( "You got a " +tempSand+" "+tempFries + " "+tempDrink);
+        
+        Scanner ui = new Scanner(System.in);
+
+        System.out.println("Would you like some ketchup packets? If so how many? $0.25/packet");
+        int ketchupPacketCount = ui.nextInt();
+        total = total + (ketchupPacketCount *.25);
+
         if(discount == true){
             total = total-1; 
-        }
-        Scanner ui = new Scanner(System.in);
-        System.out.println((total*1.07));
+            System.out.println("You get a discount of $1"); 
 
-        System.out.println("Would you like some ketchup packets? If so how many? Type 0 for none");
-        
+        }
+        System.out.println("Subtotal: " + total);
+        System.out.println("Total: " + (total*1.07));
 
     ui.close();}
 
@@ -111,8 +119,8 @@ public class rev2   {
             discount = false;
         }
         return tempDrink;
-        
-        ui.close();}
+    
+        }
 
 
 
