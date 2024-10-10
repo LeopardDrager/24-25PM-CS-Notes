@@ -31,14 +31,16 @@ public class rev4   {
             
             if(orderAgain.equalsIgnoreCase("y") ){
                 
-                tempSand = tempSand + ",\s" + orderSandwhich(); 
-                tempFries = tempFries + ",\s" + orderFries();
-                tempDrink = tempDrink + ",\s" + orderDrink();
+                tempSand = tempSand + "\s" + orderSandwhich(); 
+                tempFries = tempFries + "\s" + orderFries();
+                tempDrink = tempDrink + "\s" + orderDrink();
+
+                i++;
                 
              
 
-                totalForOrder = total + " " ;
-                i++;
+                totalForOrder = totalForOrder +  Math.round((total * 100) / 100);
+                
                 
                 
 
@@ -46,13 +48,16 @@ public class rev4   {
             }else {
                 System.out.println( "You got a " +tempSand+" "+tempFries + " "+tempDrink);
         
-
+                int d = 0;
                 
                 
-                for (int c = 0; c<=i; c++){
-                System.out.println("Your " + i +" order was " + totalForOrder.substring(0,4));
-                }
-               
+                for (int c = 1; c<=i; c++){
+                
+                System.out.println("Your " + c +" order was " + totalForOrder.substring(d,2+d));
+                d+=4;
+                
+            }
+                
                 System.out.println("Your overall subtotal: " + total);
                 System.out.println("Your overall total: " + (total*1.07));
 

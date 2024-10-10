@@ -11,8 +11,7 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-
+import androidx.core.view.WindowInsetsComp
 //public - for all files to access it
 //class -> defining a class for the JVM
 //MainActivity -> this is where your entire app starts
@@ -42,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         TextView greetingText = findViewById(R.id.outPutTXT);
 
         //output something to the outputTXT
-        String input = (userInput.getText().toString();
+        String input = userInput.getText().toString();
         greetingText.setText("Hi " +input +" nice to meet you");
 
     }
