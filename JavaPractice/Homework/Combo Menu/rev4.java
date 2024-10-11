@@ -4,6 +4,7 @@ public class rev4 {
 
     public static double total = 0;
     public static boolean discount = false;
+    public static double totalForOrderTwo = 0;
 
     public static void main(String[] args) {
         StringBuilder totalForOrder = new StringBuilder();
@@ -20,66 +21,34 @@ public class rev4 {
                 System.out.println("You get a discount of $1");
             }
             System.out.println("Would you like some ketchup packets? If so how many? $0.25/packet");
-            int ketchupPacketCount = ui.nextInt();
-            total = total + (ketchupPacketCount * .25);
+            double ketchupPacketCount = ui.nextDouble();
+            total = total + Math.round((Math.abs((ketchupPacketCount * .25))));
+            double totalForOrderOne = total - totalForOrderTwo;
 
             totalForOrder.append(Math.round(total * 100) / 100.0).append(",");
 
             System.out.println("Would you like to order again");
             String orderAgain = ui.next();
-<<<<<<< HEAD
 
             if (orderAgain.equalsIgnoreCase("y")) {
                 tempSand = tempSand + " " + orderSandwhich();
                 tempFries = tempFries + " " + orderFries();
                 tempDrink = tempDrink + " " + orderDrink();
                 i++;
+                totalForOrderTwo = total - totalForOrderOne;
             } else {
                 System.out.println("You got a " + tempSand + " " + tempFries + " " + tempDrink);
-
-                int startIndex = 0;
-                for (int c = 1; c <= i; c++) {
-                    int endIndex = totalForOrder.indexOf(",", startIndex);
-                    System.out.println("Your " + c + " order was $" + totalForOrder.substring(startIndex, endIndex));
-                    startIndex = endIndex + 1;
-                }
-=======
-            
-            if(orderAgain.equalsIgnoreCase("y") ){
-                
-                tempSand = tempSand + "\s" + orderSandwhich(); 
-                tempFries = tempFries + "\s" + orderFries();
-                tempDrink = tempDrink + "\s" + orderDrink();
-
-                i++;
-                
-             
-
-                totalForOrder = totalForOrder +  Math.round((total * 100) / 100);
-                
-                
-                
-
+                for (int c = 1; c<= i; c++) {
+                    if (c==1) {
+                        System.out.printf("\nYour " + c + " order was $%.2f", + totalForOrderOne);
+                    }else{
+                    System.out.printf("\nYour " + c + " order was $%.2f", + totalForOrderTwo);
                
-            }else {
-                System.out.println( "You got a " +tempSand+" "+tempFries + " "+tempDrink);
-        
-                int d = 0;
-                
-                
-                for (int c = 1; c<=i; c++){
-                
-                System.out.println("Your " + c +" order was " + totalForOrder.substring(d,2+d));
-                d+=4;
-                
-            }
-                
-                System.out.println("Your overall subtotal: " + total);
-                System.out.println("Your overall total: " + (total*1.07));
->>>>>>> 44182e9d03ad8f01dbe90610768127308a6b01a2
+                    }
+                }
 
-                System.out.println("Your overall subtotal: " + total);
-                System.out.println("Your overall total: " + (total * 1.07));
+                System.out.printf("\nYour overall subtotal: $%.2f", + total);
+                System.out.printf("\nYour overall total: $%.2f", + (total * 1.07));
                 break;
             }
         }
