@@ -24,7 +24,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Welcome to the MADlib HOUSE "
+            android:text="Welcome to the Madlib Generator"
             android:textAlignment="center"
             android:textStyle="bold"
             android:textSize="20dp"
@@ -37,18 +37,16 @@
             android:padding="10dp">
 
             <TextView
+
                 android:layout_width="286dp"
+                android:textAlignment="center"
                 android:layout_height="47dp"
                 android:layout_weight="1"
-                android:text="What is your First Name? " />
+                android:textSize="20dp"
 
-            <EditText
-                android:id="@+id/fNameEDT"
-                android:layout_width="59dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="text" />
+                android:text="Please pick from one these Madlib options" />
+
+
         </LinearLayout>
 
         <LinearLayout
@@ -57,104 +55,20 @@
             android:orientation="horizontal"
             android:padding="10dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <Button
+                android:id="@+id/optionOneMadLibBTN"
+                android:layout_width="35dp"
+                android:layout_height="50dp"
                 android:layout_weight="1"
-                android:text="What is your Last name?" />
-
-            <EditText
-                android:id="@+id/lNameEDT"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="text" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="10dp">
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="5dp"
+                android:text="1." />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="288dp"
+                android:layout_height="97dp"
                 android:layout_weight="1"
-                android:text="What is your Quest?" />
-
-            <EditText
-                android:id="@+id/questEDT"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="text"
-                />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="10dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="What is your favorite color?" />
-
-            <EditText
-                android:id="@+id/colorEDT"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="text"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="10dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Air Speed Velocity of an Unladen Swallow?" />
-
-            <EditText
-                android:id="@+id/swallowEDT"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="text"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="10dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="European or African?" />
-
-            <EditText
-                android:id="@+id/eaEDT"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="text"/>
+                android:text="1. The very ______  person was ______. ______ was his/her/there name, he/she/they loved to ______. He/She/They were/was even once the ______ of the ______. His/Her/Their greatest achivement was ______, while ______" />
 
         </LinearLayout>
 
