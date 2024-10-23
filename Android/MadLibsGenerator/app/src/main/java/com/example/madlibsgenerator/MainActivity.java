@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity{
                 generate.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        String finishedMadLib = inputTXT.toString()
+                        String finishedMadLib = inputTXT.toString();
 
                     }
                 });
