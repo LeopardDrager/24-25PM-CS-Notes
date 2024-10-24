@@ -66,14 +66,13 @@
                 android:orientation="horizontal"
                 android:padding="10dp">
 
-                <Button
-                    android:id="@+id/optionOneMadLibBTN"
-                    android:layout_width="35dp"
-                    android:layout_height="50dp"
+                <RadioButton
+                    android:id="@+id/optionOneMadLibRB"
+                    android:layout_width="11dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="25dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_weight="1"
-                    android:text="1." />
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1" />
 
                 <TextView
                     android:layout_width="288dp"
@@ -95,14 +94,13 @@
                 android:orientation="horizontal"
                 android:padding="10dp">
 
-                <Button
-                    android:id="@+id/optionTwoMadLibBTN"
-                    android:layout_width="35dp"
-                    android:layout_height="50dp"
+                <RadioButton
+                    android:id="@+id/optionTwoMadLibRB"
+                    android:layout_width="11dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="25dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_weight="1"
-                    android:text="2." />
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1" />
 
                 <TextView
                     android:layout_width="288dp"
@@ -124,14 +122,14 @@
                 android:orientation="horizontal"
                 android:padding="10dp">
 
-                <Button
-                    android:id="@+id/optionThreeMadLibBTN"
+                <RadioButton
+                    android:id="@+id/optionThreeMadLibRB"
                     android:layout_width="35dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="25dp"
-                    android:layout_marginRight="5dp"
+                    android:layout_marginEnd="5dp"
                     android:layout_weight="1"
-                    android:text="3." />
+                    android:text="" />
 
                 <TextView
                     android:layout_width="288dp"
