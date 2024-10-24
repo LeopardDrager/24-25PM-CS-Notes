@@ -30,18 +30,26 @@ public class MainActivity extends AppCompatActivity{
 
         EditText inputTXT = findViewById(R.id.response);
 
-        RadioButton madLibChoiceOneBTN = findViewById(R.id.optionOneMadLibRB);
-        RadioButton madLibChoiceTwoBTN = findViewById(R.id.optionTwoMadLibRB);
-        RadioButton madLibChoiceThreeBTN = findViewById(R.id.optionThreeMadLibRB);
+        RadioButton madLibChoiceOneRB = findViewById(R.id.optionOneMadLibRB);
+        RadioButton madLibChoiceTwoRB = findViewById(R.id.optionTwoMadLibRB);
+        RadioButton madLibChoiceThreeRB = findViewById(R.id.optionThreeMadLibRB);
 
         Button generate = findViewById(R.id.generateBTN);
 
-        String MadLib = "";
+
+
+
 
         generate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String entry = inputTXT.getText().toString();
+                String[] inputSeperater = entry.split(" ");
 
+                if (madLibChoiceOneRB.isChecked()) {
+
+                    outputTXT.setText(inputSeperater[1]);
+                }
 
 
             }
