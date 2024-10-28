@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 String entry = inputTXT.getText().toString();
-                String[] inputSeperater = entry.split(" ");
+                String[] inputSeperater = entry.split(" "); // used this for learning how the split works https://www.w3schools.com/java/ref_string_split.asp
 
 
                 if (madLibChoiceOneRB.isChecked() && inputSeperater.length >= 8){// Checking input for no less than 8 entries as this leads the code to cause
