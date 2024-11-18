@@ -8,26 +8,45 @@
     android:background="#E3E8F1"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button23"
-        android:layout_width="88dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="46dp"
-        android:layout_marginBottom="36dp"
-        android:backgroundTint="#0066CC"
-        android:text="1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button28"
-        android:layout_width="88dp"
-        android:layout_height="56dp"
-        android:layout_marginEnd="46dp"
-        android:layout_marginBottom="36dp"
+        android:id="@+id/startBTN"
+        android:layout_width="113dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="444dp"
         android:backgroundTint="#0066CC"
-        android:text="2"
+        android:text="Start"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="222dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="44dp"
+        android:text="This is an escape game your job is to escape the prision!"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/nameInputTXT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="Enter your name"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/startBTN"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
