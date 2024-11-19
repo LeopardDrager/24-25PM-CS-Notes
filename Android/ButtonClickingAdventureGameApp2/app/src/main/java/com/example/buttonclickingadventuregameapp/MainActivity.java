@@ -15,11 +15,16 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.snackbar.Snackbar;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 
 public class MainActivity extends AppCompatActivity {
 
     private Button startBTN;
     private EditText userInput;
+    public static ArrayList<String> items = new ArrayList<String>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

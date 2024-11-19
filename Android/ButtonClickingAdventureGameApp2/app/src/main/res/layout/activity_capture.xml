@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#E3E8F1"
-    tools:context=".SecondActivity">
+    tools:context=".CaptureActivity">
 
 
     <Button
@@ -61,18 +61,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/prisioncell" />
 
-    <ImageButton
-        android:id="@+id/paperClipBTN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginBottom="17dp"
-        android:background="@null"
-        android:rotation="23"
-        android:scaleX=".05"
-        android:scaleY=".05"
-        app:layout_constraintBottom_toBottomOf="@+id/leaveCellBTN"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/paperclip" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
