@@ -13,12 +13,7 @@
         android:theme="@style/Theme.ButtonClickingAdventureGameApp"
         tools:targetApi="31">
 
-        <!-- Declare SecondActivity as exported -->
-        <activity
-            android:name=".SecondActivity"
-            android:exported="true" />
 
-        <!-- MainActivity as the launcher activity -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -27,6 +22,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".SecondActivity"
+            android:exported="false" />
+
+
+        <activity
+            android:name=".ThirdActivity"
+            android:exported="false" />
+
+
+        <activity
+            android:name=".CaptureActivity"
+            android:exported="false" />
 
     </application>
 

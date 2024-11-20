@@ -39,14 +39,13 @@ public class MainActivity extends AppCompatActivity {
         startBTN = findViewById(R.id.startBTN);
         userInput = findViewById(R.id.nameInputTXT);
         startBTN.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-
-            Intent i = new Intent(MainActivity.this, SecondActivity.class);
-            i.putExtra("User's Name",String.valueOf(userInput.getText()));
+            @Override
+         public void onClick(View v) {
             if(userInput.getText().toString().isEmpty()){
                 Toast.makeText(MainActivity.this, "Please enter a name",Toast.LENGTH_LONG).show();
             }else {
+                Intent i = new Intent(MainActivity.this, SecondActivity.class);
+                i.putExtra("User's Name",String.valueOf(userInput.getText()));
                 startActivity(i);
             }
         }
