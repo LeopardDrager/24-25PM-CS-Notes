@@ -1,3 +1,4 @@
+import java.io.BufferedWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -30,7 +31,7 @@ public class VetManger {
                     removeAnimal(scanner);
                     break;
                 case 5:
-                    //saveAndClose();
+                    saveAndClose();
                     break;
                 case 6:
                     running = false;
@@ -156,7 +157,23 @@ public class VetManger {
         System.out.println("Animal Removed");
     }
 
-    
+    private static void saveAndClose(){
+        String out = "";
+
+        // loop through our ArrayList(s) and concatenate to the out 
+        for (int i = 0; i < dogs.size();  i++){
+            out += dogs.get(i).dbInfo(); //grabs the toString 
+        }
+        System.out.println(out);
+
+
+
+
+
+        BufferWriter.writeString("Hello World");
+        BufferWriter.saveAndClose();
+        System.exit(0);
+    }
 
 
 

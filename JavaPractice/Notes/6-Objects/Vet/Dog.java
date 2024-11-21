@@ -63,6 +63,9 @@ public class Dog{
     public void poop(){
         System.out.println(this.name + " left a dinosaur size turd on the front porch!");
     }
+    public String dbInfo(){
+        return this.name +"," + this.breed + "," + this.gender + "," + this.age+"\n";
+    }
 
     @Override
     public String toString() {
