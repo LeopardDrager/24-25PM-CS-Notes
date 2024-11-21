@@ -4,6 +4,7 @@ import static com.example.buttonclickingadventuregameapp.MainActivity.items;
 
 import  android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -23,7 +24,8 @@ public class SecondActivity extends AppCompatActivity {
     private Button leaveCell, stayCell;
     private ImageButton paperclip;
     private int captureNumber = 0;
-    private String welcomeMSG, prisionerName;
+    private String prisionerName;
+
 
 
 
@@ -32,10 +34,14 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
+        // Initialize the list to ensure it has at least 6 elements
+        for (int i = items.size(); i < 6; i++) {
+            items.add("");  // Add empty strings to avoid out-of-bounds issues
+        }
+
+
         // Retrieve the user's name from the Intent
         prisionerName = getIntent().getStringExtra("User's Name");
-
-        // Ensure that the name is valid (not null or empty)
         if (prisionerName == null || prisionerName.isEmpty()) {
             prisionerName = "Unknown Prisoner";  // Fallback value
         }
@@ -54,6 +60,7 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     private void setupUI() {
+        String welcomeMSG;
         if (captureNumber == 0) {
             welcomeMSG = "Hello, " + prisionerName + ", this is your prison cell!";
             messageTXT.setText(welcomeMSG);
@@ -70,42 +77,38 @@ public class SecondActivity extends AppCompatActivity {
         paperclip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                items.add(0, "paperclip");
-                Log.d("Adding", items.get(0));
-                paperclip.setVisibility(View.GONE);  // Hide the paperclip button after clicking
+                items.set(0, "paperclip");
+                paperclip.setVisibility(View.GONE);  // I found this on some random stack overflow link at night and lost the link
             }
         });
 
-        // Handle stayCell button listener (changes based on captureNumber)
+
         stayCell.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (captureNumber == 1) {
                     setupUI();  // Update the message based on captureNumber
                     captureNumber = 2;
-                } else if (captureNumber == 2) {
-                    setupUI();  // Update the message based on captureNumber
+                }else if (captureNumber == 2) {
+                    // Update the message based on captureNumber
                     captureNumber = 3;
                 }
             }
         });
 
-        // Handle leaveCell button listener (only active for captureNumber 3)
         leaveCell.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                items.add(9, prisionerName);
-                Log.d("Capture", "Current captureNumber: " + captureNumber);
 
                 if (captureNumber < 3) {
-                    // Navigate to ThirdActivity
-                    Log.d("ActivityLaunch", "Going to ThirdActivity");
+                    if (items.get(0).isEmpty()) {
+                        items.add(0, "false");
+                    }
+                    items.add(1, prisionerName);
                     Intent i = new Intent(SecondActivity.this, ThirdActivity.class);
-                    i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);  // Optional: Clears previous activities from back stack
                     startActivity(i);
-                } else if (captureNumber == 3) {
-                    // Navigate to CaptureActivity
-                    Log.d("ActivityLaunch", "Going to CaptureActivity");
+                }else if (captureNumber == 3) {
+                    items.add(1, prisionerName);
                     Intent i = new Intent(SecondActivity.this, CaptureActivity.class);
                     startActivity(i);
                 }

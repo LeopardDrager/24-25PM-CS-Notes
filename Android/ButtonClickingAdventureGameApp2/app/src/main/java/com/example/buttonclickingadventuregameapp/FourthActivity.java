@@ -17,10 +17,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 
 
-public class ThirdActivity extends AppCompatActivity {
+public class FourthActivity extends AppCompatActivity {
 
     private TextView messageTXT;
-    private Button leftOfCell, rightOfCell;
+    private Button forwardBTN, backwardBTN;
     private int captureNumber = 0;
 
 
@@ -30,26 +30,26 @@ public class ThirdActivity extends AppCompatActivity {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_third);
-        rightOfCell = findViewById(R.id.rightBTN);
-        leftOfCell = findViewById(R.id.leftBTN);
+        setContentView(R.layout.activity_fourth);
+        forwardBTN = findViewById(R.id.forwardBTN);
+        backwardBTN = findViewById(R.id.backwardBTN);
 
-        rightOfCell.setOnClickListener(new View.OnClickListener() {
+        backwardBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(ThirdActivity.this, CaptureActivity.class);
+                Intent i = new Intent (FourthActivity.this, CaptureActivity.class);
                 startActivity(i);
-                items.set(4,"false");
             }
+
         });
-        leftOfCell.setOnClickListener(new View.OnClickListener() {
+        forwardBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(ThirdActivity.this, FourthActivity.class);
+                Intent i = new Intent(FourthActivity.this, FithActivity.class);
                 startActivity(i);
-                items.set(4,"true");
             }
         });
+
 
 
 

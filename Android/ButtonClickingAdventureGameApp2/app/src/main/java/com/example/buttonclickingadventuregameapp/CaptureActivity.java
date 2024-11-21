@@ -10,31 +10,34 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class CaptureActivity extends AppCompatActivity {
-    private TextView messageTXT;
-    private String message;
-    private Button retryBTN;
-
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState){
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_capture);
-        messageTXT = findViewById(R.id.helloTXT);
-        retryBTN = findViewById(R.id.retryBTN);
 
-        message = items.get(9) + ", has been caught!";
+        TextView messageTXT = findViewById(R.id.helloTXT);
+        Button retryBTN = findViewById(R.id.retryBTN);
+        String message;
+
+            if (items.get(0).equals("false") && items.get(4).equals("true")) {
+                message = items.get(1) + " was caught because they couldn't find the paperclip";
+            }else if (items.get(4).equals("false") || items.get(5).equals("true")){
+                message = items.get(1) + " ran into the guard";
+            }
+
+            else {
+                message = items.get(1) + ", has been caught!";
+            }
+
         messageTXT.setText(message);
+
         retryBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(CaptureActivity.this, MainActivity.class);
                 startActivity(i);
-
             }
         });
-
-
-
-
-
     }
+
 }
