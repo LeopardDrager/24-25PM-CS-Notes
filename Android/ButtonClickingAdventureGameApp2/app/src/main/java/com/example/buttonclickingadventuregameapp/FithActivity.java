@@ -61,7 +61,9 @@ public class FithActivity extends AppCompatActivity {
                 }else if (items.get(0).equals("false")){
                     items.set(6, "true");
                     Intent i = new Intent(FithActivity.this, CaptureActivity.class);
+                    i.putExtra("User's Name","jooeer");
                     startActivity(i);
+
 
                 }
             }

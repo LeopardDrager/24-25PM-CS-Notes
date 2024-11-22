@@ -56,7 +56,9 @@ public class SixthActivity extends AppCompatActivity {
                     items.set(6,"false");
                 }
                 Intent i = new Intent(SixthActivity.this, FithActivity.class);
+                i.putExtra("User's Name","jooeer");
                 startActivity(i);
+
             }
         });
 

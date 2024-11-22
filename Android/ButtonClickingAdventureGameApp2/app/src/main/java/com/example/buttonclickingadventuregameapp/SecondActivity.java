@@ -110,6 +110,7 @@ public class SecondActivity extends AppCompatActivity {
                 }else if (captureNumber == 3) {
                     items.add(1, prisionerName);
                     Intent i = new Intent(SecondActivity.this, CaptureActivity.class);
+                    i.putExtra("User's Name","jooeer");
                     startActivity(i);
                 }
             }

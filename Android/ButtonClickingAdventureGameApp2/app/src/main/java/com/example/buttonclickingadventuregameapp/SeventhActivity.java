@@ -48,6 +48,7 @@ public class SeventhActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(SeventhActivity.this, SixthActivity.class);
+                i.putExtra("User's Name","jooeer");
                 startActivity(i);
             }
         });

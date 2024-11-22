@@ -61,6 +61,7 @@ public class FourthActivity extends AppCompatActivity {
 
                 }
                 Intent i = new Intent(FourthActivity.this, FithActivity.class);
+                i.putExtra("User's Name","jooeer");
                 startActivity(i);
             }
 
