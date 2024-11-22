@@ -37,6 +37,7 @@ public class SeventhActivity extends AppCompatActivity {
                     outputMSG = items.get(1) + " you have a good eye!";
                     outputTXT.setText(outputMSG);
                     Intent i = new Intent(SeventhActivity.this, EighthActivity.class);
+                    startActivity(i);
                 }else if (items.get(6).equals("false")){
                     outputMSG = items.get(1) + " you better go look for it";
                     outputTXT.setText(outputMSG);
@@ -47,6 +48,7 @@ public class SeventhActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(SeventhActivity.this, SixthActivity.class);
+                startActivity(i);
             }
         });
 
