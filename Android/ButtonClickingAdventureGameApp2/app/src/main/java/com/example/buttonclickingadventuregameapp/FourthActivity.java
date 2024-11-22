@@ -21,10 +21,8 @@ public class FourthActivity extends AppCompatActivity {
 
     private TextView messageTXT;
     private Button forwardBTN, backwardBTN;
+    private ImageButton carkeys;
     private int captureNumber = 0;
-
-
-
 
 
     @Override
@@ -33,11 +31,24 @@ public class FourthActivity extends AppCompatActivity {
         setContentView(R.layout.activity_fourth);
         forwardBTN = findViewById(R.id.forwardBTN);
         backwardBTN = findViewById(R.id.backwardBTN);
+        carkeys = findViewById(R.id.carkeysBTN);
+
+        carkeys.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                items.set(5, "carkeys");
+                carkeys.setVisibility(View.GONE);
+
+            }
+        });
 
         backwardBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent (FourthActivity.this, CaptureActivity.class);
+                if (!items.get(5).equals("carkeys")) {
+                    items.set(5, "false");
+                }
+                Intent i = new Intent(FourthActivity.this, ThirdActivity.class);
                 startActivity(i);
             }
 
@@ -45,14 +56,16 @@ public class FourthActivity extends AppCompatActivity {
         forwardBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (!items.get(5).equals("carkeys")) {
+                    items.set(5, "false");
+
+                }
                 Intent i = new Intent(FourthActivity.this, FithActivity.class);
                 startActivity(i);
             }
+
+
         });
-
-
-
-
     }
 }
 

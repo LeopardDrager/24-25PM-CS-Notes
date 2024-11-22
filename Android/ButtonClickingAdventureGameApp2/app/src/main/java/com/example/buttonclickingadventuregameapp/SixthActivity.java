@@ -34,14 +34,29 @@ public class SixthActivity extends AppCompatActivity {
         boltCutters.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                items.set(5, "boltcutters");
+                items.set(6, "boltcutters");
                 boltCutters.setVisibility(View.GONE);
+
             }
         });
         forward.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                if (!items.get(6).equals("boltcutters")){
+                    items.set(6,"false");
+                }
+                Intent i = new Intent (SixthActivity.this, SeventhActivity.class);
+                startActivity(i);
+            }
+        });
+        backward.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!items.get(6).equals("boltcutters")){
+                    items.set(6,"false");
+                }
+                Intent i = new Intent(SixthActivity.this, FithActivity.class);
+                startActivity(i);
             }
         });
 

@@ -10,28 +10,28 @@
 
 
     <Button
-        android:id="@+id/leftBTN"
+        android:id="@+id/escapeBTN"
         android:layout_width="115dp"
         android:layout_height="67dp"
         android:layout_marginStart="54dp"
         android:layout_marginTop="24dp"
         android:backgroundTint="#0066CC"
-        android:text="Left"
+        android:text="Escape"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/rightBTN"
+        app:layout_constraintEnd_toStartOf="@+id/backwardBTN"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/helloTXT"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/rightBTN"
+        android:id="@+id/backwardBTN"
         android:layout_width="115dp"
         android:layout_height="67dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="56dp"
         android:backgroundTint="#0066CC"
-        android:text="Right"
+        android:text="Backward"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/helloTXT"
@@ -59,6 +59,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/jailafftercell" />
+        app:srcCompat="@drawable/sportscar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

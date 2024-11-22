@@ -2,36 +2,21 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/third"
+    android:id="@+id/capture"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#E3E8F1"
-    tools:context=".ThirdActivity">
+    tools:context=".CaptureActivity">
 
 
     <Button
-        android:id="@+id/leftBTN"
-        android:layout_width="115dp"
-        android:layout_height="67dp"
-        android:layout_marginStart="54dp"
-        android:layout_marginTop="24dp"
-        android:backgroundTint="#0066CC"
-        android:text="Left"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/rightBTN"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/helloTXT"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/rightBTN"
+        android:id="@+id/retryBTN"
         android:layout_width="115dp"
         android:layout_height="67dp"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="56dp"
+        android:layout_marginEnd="148dp"
         android:backgroundTint="#0066CC"
-        android:text="Right"
+        android:text="Retry"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/helloTXT"
@@ -59,6 +44,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/jailafftercell" />
+        app:srcCompat="@drawable/oficer" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

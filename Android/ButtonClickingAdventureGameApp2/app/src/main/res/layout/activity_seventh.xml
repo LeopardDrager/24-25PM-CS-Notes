@@ -2,36 +2,36 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/third"
+    android:id="@+id/sixth"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#E3E8F1"
-    tools:context=".ThirdActivity">
+    tools:context=".SixthActivity">
 
 
     <Button
-        android:id="@+id/leftBTN"
+        android:id="@+id/cutTheFenceBTN"
         android:layout_width="115dp"
         android:layout_height="67dp"
         android:layout_marginStart="54dp"
         android:layout_marginTop="24dp"
         android:backgroundTint="#0066CC"
-        android:text="Left"
+        android:text="Cut the fence"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/rightBTN"
+        app:layout_constraintEnd_toStartOf="@+id/backwardBTN"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/helloTXT"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/rightBTN"
+        android:id="@+id/backwardBTN"
         android:layout_width="115dp"
         android:layout_height="67dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="56dp"
         android:backgroundTint="#0066CC"
-        android:text="Right"
+        android:text="Backward"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/helloTXT"
@@ -57,8 +57,11 @@
         android:layout_marginTop="200dp"
         android:layout_marginEnd="2dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/jailafftercell" />
+        app:srcCompat="@drawable/prisonfence" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

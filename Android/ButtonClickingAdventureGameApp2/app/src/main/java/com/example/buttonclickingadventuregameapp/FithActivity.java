@@ -59,7 +59,7 @@ public class FithActivity extends AppCompatActivity {
                     outputMSG = items.get(1) + " you already have it!";
                     outputTXT.setText(outputMSG);
                 }else if (items.get(0).equals("false")){
-                    items.set(5, "true");
+                    items.set(6, "true");
                     Intent i = new Intent(FithActivity.this, CaptureActivity.class);
                     startActivity(i);
 
