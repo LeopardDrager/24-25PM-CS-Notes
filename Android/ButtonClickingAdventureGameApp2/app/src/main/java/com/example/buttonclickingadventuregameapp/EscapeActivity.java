@@ -26,6 +26,9 @@ public class EscapeActivity extends AppCompatActivity {
         retryBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                for (int i = 0; i<items.size(); i++){
+                    items.set(i,"");
+                }
                 Intent i = new Intent(EscapeActivity.this, MainActivity.class);
                 startActivity(i);
             }

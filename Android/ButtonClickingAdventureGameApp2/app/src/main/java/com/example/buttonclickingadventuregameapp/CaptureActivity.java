@@ -33,6 +33,9 @@ public class CaptureActivity extends AppCompatActivity {
         retryBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                for (int i = 0; i<items.size(); i++){
+                    items.set(i,"");
+                }
                 Intent i = new Intent(CaptureActivity.this, MainActivity.class);
                 startActivity(i);
             }
