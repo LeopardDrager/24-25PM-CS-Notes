@@ -1,4 +1,5 @@
-import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -11,23 +12,33 @@ public class VetManger {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         boolean running = true;
-        
+        /*
+            try{
+                // loadAnimals()
+            }
+            catch (Exception e){
+                System.err.println("Error loading db...  sorry...");
+            }
+        */
         while (running) {
             printMenu();
             int choice = scanner.nextInt();
             scanner.nextLine();  // Consume newline
             switch (choice) {
                 case 1:
+                    //CREATE Route
                     addAnimal(scanner);
-                    
                     break;
                 case 2:
+                    //READ Route 
                     viewAnimals();
                     break;
                 case 3:
+                    //UPDATE Route
                     modifyAnimal(scanner);
                     break;
                 case 4:
+                    //DELETE Route
                     removeAnimal(scanner);
                     break;
                 case 5:
@@ -104,6 +115,7 @@ public class VetManger {
                     System.out.println(dog);
                 }
                 String name = scanner.next();
+
                 //choose the property
                 System.out.println("Choose a property: \n\t1. Name\t2. Breed\t3. Gender\t4. Age");
                 type = scanner.nextInt();
@@ -151,30 +163,42 @@ public class VetManger {
             }
         }
         else if(type==2){
+            System.out.println("Which cat? (name)");
+            for (Cat cat:cats){
+                System.out.println(cat);
+            }
+            String name = scanner.next();
+            for(Cat cat:cats){
+                if (cat.getName().equals(name)){
+                    cats.remove(cat);
+                }
+            }
+
         }
         else if(type==3){
+            System.out.println("Which dragon? (name)");
+            for (Dragon dragon:dragons){
+                System.out.println(dragon);
+            }
+            String name = scanner.next();
+            for(Dragon dragon:dragons){
+                if (dragon.getName().equals(name)){
+                    dragons.remove(dragon);
+
         }
         System.out.println("Animal Removed");
     }
 
     private static void saveAndClose(){
-        String out = "";
-
-        // loop through our ArrayList(s) and concatenate to the out 
-        for (int i = 0; i < dogs.size();  i++){
-            out += dogs.get(i).dbInfo(); //grabs the toString 
+        //                                              Add true as second parameter to append to file
+        try (FileWriter writer = new FileWriter("animals.txt")) {
+            for (Dog dog : dogs) {
+                writer.write(dog.toString() + "\n");
+            }
+            System.out.println("Data saved successfully.");
+        } catch (IOException e) {
+            System.out.println("An error occurred while saving data.");
         }
-        System.out.println(out);
-
-
-
-
-
-        BufferWriter.writeString("Hello World");
-        BufferWriter.saveAndClose();
         System.exit(0);
     }
-
-
-
 }

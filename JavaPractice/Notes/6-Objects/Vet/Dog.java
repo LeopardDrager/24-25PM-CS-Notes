@@ -15,6 +15,17 @@ public class Dog{
         // System.out.println(this.name+" was created!");
     }
 
+    //technically you should have your no-arg Constructor
+    public Dog(){}
+
+    //getters and setters
+    
+
+    //extra f(x)
+    public void eat(){
+        //this.name so that Java will understand what object's name needs to be called
+        System.out.println(this.name + " the dog is munching on some shoes!");
+    }
     public String getName() {
         return name;
     }
@@ -47,24 +58,11 @@ public class Dog{
         this.age = age;
     }
 
-    //technically you should have your no-arg Constructor
-    public Dog(){}
-
-    //getters and setters
-
-    //extra f(x)
-    public void eat(){
-        //this.name so that Java will understand what object's name needs to be called
-        System.out.println(this.name + " the dog is munching on some shoes!");
-    }
     public void sleep(){
         System.out.println("Is that a dog or a chainsaw");
     }
     public void poop(){
         System.out.println(this.name + " left a dinosaur size turd on the front porch!");
-    }
-    public String dbInfo(){
-        return this.name +"," + this.breed + "," + this.gender + "," + this.age+"\n";
     }
 
     @Override
