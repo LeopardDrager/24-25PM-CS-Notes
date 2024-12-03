@@ -1,24 +1,15 @@
-public class Dragon{
-    //field variable or global variables
+public class Bird {
     private String name, breed, gender;
     private int age;
 
-    //Constructor - builds an object
-    public Dragon(String newName, String breed, String gender, int age){
-        //this is to allow java to connect the name variable to the object we call in 
-        //  other files. Without this, Java will not understand what var you're accessing
-        this.name = newName;
+    public Bird(String name, String breed, String gender, int age) {
+        this.name = name;
         this.breed = breed;
         this.gender = gender;
         this.age = age;
-        // System.out.println(newName);
-        // System.out.println(this.name+" was created!");
     }
 
-    //technically you should have your no-arg Constructor
-    public Dragon(){}
-
-    //getters and setters
+    public Bird() {}
 
     public String getName() {
         return name;
@@ -52,10 +43,8 @@ public class Dragon{
         this.age = age;
     }
 
-
     @Override
     public String toString() {
-        return "Dragon [name=" + this.name + "]";
+        return "Bird [name=" + name + "]";
     }
-    
 }
