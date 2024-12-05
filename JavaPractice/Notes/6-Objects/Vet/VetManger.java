@@ -1,3 +1,5 @@
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -14,14 +16,14 @@ public class VetManger {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         boolean running = true;
-        /*
+        
             try{
-                // loadAnimals()
+                loadData();
             }
             catch (Exception e){
                 System.err.println("Error loading db...  sorry...");
             }
-        */
+       
         while (running) {
             printMenu();
             int choice = scanner.nextInt();
@@ -44,9 +46,11 @@ public class VetManger {
                     removeAnimal(scanner);
                     break;
                 case 5:
-                    saveAndClose();
+                    //SAVE Route
+                    saveAnimals();
                     break;
                 case 6:
+                    //EXIT Route
                     running = false;
                     break;
                 default:
@@ -76,7 +80,7 @@ public class VetManger {
     
         System.out.println("Enter the breed (no numbers allowed):");
         String breed = scanner.next();
-        while (!breed.matches("[a-zA-Z ]+")) {
+        while (!breed.matches("[a-zA-Z ]+")) { // I used stack overflow for this
             System.out.println("Invalid breed. Enter again:");
             breed = scanner.next();
         }
@@ -88,7 +92,7 @@ public class VetManger {
             gender = scanner.next();
         }
     
-        System.out.println("Enter the age (a positive number):");
+        System.out.println("Enter the age:");
         int age = scanner.nextInt();
         while (age < 0) {
             System.out.println("Invalid age. Enter again:");
@@ -222,7 +226,7 @@ public class VetManger {
     }
         
     private static void removeAnimal(Scanner scanner){
-        System.out.println("Choose a species: \n\t1. Dog\t2. Cat\t3. Dragon");
+        System.out.println("Choose a species: \n\t1. Dog\t2. Cat\t3. Dragon\t4. Bird");
         int type = scanner.nextInt();
         if(type==1){
             //choose the animal
@@ -265,15 +269,25 @@ public class VetManger {
         }
         System.out.println("Animal Removed");
             }
+        } else if(type==4){
+            System.out.println("Which bird? (name)");
+            for (Bird bird:birds){
+                System.out.println(bird);
+            }
+            String name = scanner.next();
+            for(Bird bird:birds){
+                if (bird.getName().equals(name)){
+                    birds.remove(bird);
+
+        }
+        System.out.println("Animal Removed");
+            }
         }
     }
 
-    private static void saveAnimals(Scanner scanner) {
-        System.out.println("Would you like to save(s) or exit(e)");
-        String choice = scanner.next();
-        if (choice.equalsIgnoreCase("s")){
-
-        try (FileWriter writer = new FileWriter("animals.txt")) {
+    private static void saveAnimals() {
+        
+        try (FileWriter writer = new FileWriter("animals.txt")) { //I used file writer because we used this for our password manager
             for (Dog dog : dogs) {
                 writer.write("Dog," + dog.getName() + "," + dog.getBreed() + "," + dog.getGender() + "," + dog.getAge() + "\n");
             }
@@ -287,14 +301,45 @@ public class VetManger {
                 writer.write("Bird," + bird.getName() + "," + bird.getBreed() + "," + bird.getGender() + "," + bird.getAge() + "\n");
             }
             System.out.println("Animals saved successfully.");
+           
 
         } catch (IOException e) {
             System.err.println("Error saving animals: " + e.getMessage());
             }
-        }else if (choice.equalsIgnoreCase("e")){
             System.exit(0);
-        }else{
-           
-        }
+        
     }
+    private static void loadData() {
+    try (Scanner fileScanner = new Scanner(new File("animals.txt"))) {
+        while (fileScanner.hasNextLine()) {
+            String[] data = fileScanner.nextLine().split(",");
+            String type = data[0];
+            String name = data[1];
+            String breed = data[2];
+            String gender = data[3];
+            int age = Integer.parseInt(data[4]);
+
+            switch (type) {
+                case "Dog":
+                    dogs.add(new Dog(name, breed, gender, age));
+                    break;
+                case "Cat":
+                    cats.add(new Cat(name, breed, gender, age));
+                    break;
+                case "Dragon":
+                    dragons.add(new Dragon(name, breed, gender, age));
+                    break;
+                case "Bird":
+                    birds.add(new Bird(name, breed, gender, age));
+                    break;
+                default:
+                    System.err.println("Unknown animal type in file: " + type);
+            }
+        }
+        System.out.println("Animals loaded from file successfully.");
+    } catch (FileNotFoundException e) {
+        System.err.println("Animals file not found. Starting with an empty list.");
+    }
+}
+
 }
