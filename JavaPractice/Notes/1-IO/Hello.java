@@ -21,7 +21,8 @@ public class Hello {
             out -> subclass that deals with output of information
             println() -> print with a new line at the end of the data
         */
- 
+        
+        
         System.out.println("Hello World");
         /*
             Escape characters basically a special character
