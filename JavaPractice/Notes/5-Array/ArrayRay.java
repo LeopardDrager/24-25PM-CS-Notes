@@ -103,7 +103,7 @@ public class ArrayRay {
                 System.out.println(grid[r][c]);
             }
         }
-
+        
     }
     private static void printHorizontal(int[] arr){
         for(int i=0;i<arr.length;i++){
