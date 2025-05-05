@@ -98,8 +98,8 @@ public class ArrayRay {
         int r2c2 = grid[1][1];
 
         //if you want to print all of the items
-        for(int r; r<grid.lenth;r++){
-            for(int c = 0; c < grid[r].lenth;c++){
+        for(int r = 0; r<grid.length;r++){
+            for(int c = 0; c < grid[r].length;c++){
                 System.out.println(grid[r][c]);
             }
         }
